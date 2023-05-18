@@ -1,14 +1,17 @@
+-- Schema created in MySQL Workbench
 create schema dannys_diner;
 use dannys_diner;
+
+-- All 3 Tables created 
 CREATE TABLE members (
     customer_id CHAR(2) NOT NULL PRIMARY KEY,
-    join_date DATE
-);
+    join_date DATE );
+    
 CREATE TABLE menu (
     product_id INT NOT NULL PRIMARY KEY,
     product_name VARCHAR(20) NOT NULL,
-    price INT NOT NULL
-);
+    price INT NOT NULL );
+    
 CREATE TABLE sales (
     customer_id CHAR(2) NOT NULL,
     order_date DATE,
@@ -16,18 +19,27 @@ CREATE TABLE sales (
     FOREIGN KEY (customer_id)
         REFERENCES members (customer_id),
     FOREIGN KEY (product_id)
-        REFERENCES menu (product_id)
-);
+        REFERENCES menu (product_id) );
+
+-- Data inserted into all tables
 INSERT INTO members (customer_id, join_date) VALUES ('A', '2021-01-07'), ('B', '2021-01-09'), ('C', '2021-01-11');
+
 INSERT INTO menu (product_id, product_name, price) VALUES ('1', 'sushi', '10'), ('2', 'curry', '15'), ('3', 'ramen', '12');
+
 INSERT INTO sales (customer_id, order_date, product_id) VALUES ('A', '2021-01-01', '1'), ('A', '2021-01-01', '2'), 
 ('A', '2021-01-07', '2'), ('A', '2021-01-10', '3'), ('A', '2021-01-11', '3'), ('A', '2021-01-11', '3'), ('B', '2021-01-01', '2'), 
 ('B', '2021-01-02', '2'), ('B', '2021-01-04', '1'), ('B', '2021-01-11', '1'), ('B', '2021-01-16', '3'), ('B', '2021-02-01', '3'),
 ('C', '2021-01-01', '3'), ('C', '2021-01-01', '3'),  ('C', '2021-01-07', '3');
+
+-- Select statements to check whether data is correctly inserted or not !! It is always necessary to check before start 
+    writing the queries.
+    
 SELECT * FROM members;
 SELECT * FROM menu;
 SELECT * FROM sales;
--- Q1 c
+
+
+-- Q1: 
 SELECT customer_id, SUM(price) AS 'Total_Amount_Spent' FROM sales
 JOIN menu ON sales.product_id = menu.product_id GROUP BY customer_id;
 -- Q2 c
