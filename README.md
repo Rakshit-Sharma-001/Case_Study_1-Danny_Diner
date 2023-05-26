@@ -3,7 +3,7 @@ This repository contains all of my code submissions for Part-1 of the #8WeekSQLC
 
 All case study's requirements and resources are available on the challenge [website](https://8weeksqlchallenge.com/case-study-1/).
 
-Check out the sql file for solutions along with the output images for better understanding.
+Check out the Diner Schema for creation of database along with tables and contents. SQL Code file contanins solutions along with the output for better understanding.
 
 Any suggestions and ideas for code improvemnt and optimisation are welcome.
 All of the SQL work has been written in MySQL Workbench. 
