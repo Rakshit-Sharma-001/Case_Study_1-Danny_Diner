@@ -3,6 +3,8 @@
 SELECT customer_id, SUM(price) AS 'Total_Amount_Spent'
 FROM sales JOIN menu ON sales.product_id = menu.product_id
 GROUP BY customer_id;
+-- Output
+<table><tr><td></td><td></td></table>
 
 -- q2 
 
