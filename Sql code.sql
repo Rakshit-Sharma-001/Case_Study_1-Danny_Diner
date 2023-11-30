@@ -59,7 +59,8 @@ SELECT customer_id,SUM(CASE WHEN product_name = 'sushi' THEN 20 * price ELSE 10 
 END) AS money_spent FROM sales JOIN menu ON sales.product_id = menu.product_id
 GROUP BY customer_id ORDER BY customer_id;
 
--- Q10: In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January? 
+-- Q10: In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - 
+--	how many points do customer A and B have at the end of January? 
 
 WITH dates AS( SELECT *, adddate(join_date, interval 7 day) as valid_date, '2021-01-31' 
 	AS last_date FROM members) Select S.Customer_id, SUM( Case When m.product_ID = 1 THEN m.price*20 
