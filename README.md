@@ -5,7 +5,7 @@ All case study's requirements and resources are available on the challenge [webs
 
 Check out the Diner Schema for creation of database along with tables and contents. 
 
-SQL Code file contains solutions. The outputs shall be uploaded in upcoming time for better understanding.
+SQL Code file contains solutions for all questions. Output images shall be uploaded in upcoming time for better understanding.
 
 All of the SQL work has been written in MySQL Workbench. 
 
