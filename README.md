@@ -7,7 +7,7 @@ Check out the Diner Schema for creation of database along with tables and insert
 
 SQL Code file contains solutions for all questions. Output images shall be uploaded in upcoming time for better understanding.
 
-All of the SQL work has been written in MySQL Workbench. 
+All of the SQL work has been written in MySQL Workbench. Check out the above given site to find the relationship tables that are crested in bonus Tables 1 and 2.
 
 Also, I have done some changes to the Dataset. As you can see in code file, i have created 1 more entity in members table {member C having join date '2021-01-11'}.
 
